@@ -6,7 +6,7 @@ public class TarefaDTO {
 
 	private Long id;
 	/**
-	 * Título do evento, uma descrição curta
+	 * Titulo do evento
 	 */
 	private String titulo;
 	/**
@@ -14,7 +14,7 @@ public class TarefaDTO {
 	 */
 	private java.util.Date data;
 	/**
-	 * Descrição da tarefa
+	 * Descricao da tarefa
 	 */
 	private  String description;
 	
