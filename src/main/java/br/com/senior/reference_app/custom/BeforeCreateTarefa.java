@@ -19,7 +19,7 @@ public class BeforeCreateTarefa {
     }
 	
 	@RequestMapping(value="/", method= RequestMethod.POST)
-    public ResponseEntity<?> createTarefa(@RequestBody TarefaDTO payload, HttpServletRequest request) {
+    public ResponseEntity<?> createTarefa(@RequestBody TarefaDto payload, HttpServletRequest request) {
 		//Obt�m os headers tenant usuario e timeout 
 		String user = request.getHeader("x-senior-user");
 		String tenant = request.getHeader("x-senior-tenant");
