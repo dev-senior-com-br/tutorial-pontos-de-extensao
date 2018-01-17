@@ -2,7 +2,7 @@ package br.com.senior.reference_app.custom;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-public class TarefaDto {
+public class TarefaDTO {
 
 	private Long id;
 	/**
