@@ -13,9 +13,14 @@ public class BeforeCreateTarefa {
 	
 	private static String CUSTOM_STRING  = "CUSTOMIZADO - ";
 	
+	@RequestMapping(value="/", method= RequestMethod.GET)
+    public ResponseEntity<?> index() {
+		return ResponseEntity.ok("<h3>Customizacao da senior X platform!!</h3>");
+    }
+	
 	@RequestMapping(value="/", method= RequestMethod.POST)
-    public ResponseEntity<?> index(@RequestBody TarefaDTO payload, HttpServletRequest request) {
-		//Obtém os headers tenant usuario e timeout 
+    public ResponseEntity<?> createTarefa(@RequestBody TarefaDTO payload, HttpServletRequest request) {
+		//Obtï¿½m os headers tenant usuario e timeout 
 		String user = request.getHeader("x-senior-user");
 		String tenant = request.getHeader("x-senior-tenant");
 		String customHeader = request.getHeader("ecossistema");
