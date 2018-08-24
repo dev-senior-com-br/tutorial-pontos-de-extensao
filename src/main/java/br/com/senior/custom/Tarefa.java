@@ -1,26 +1,28 @@
 package br.com.senior.custom;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
 public class Tarefa {
 
-	 public String id;
+	 private String id;
     /**
      * Título do evento, uma descrição curta
      */
-    public String titulo;
+    private String titulo;
     /**
      * A data e hora do evento
      */
-    public java.util.Date data;
+    private java.util.Date data;
     /**
      * Descrição da tarefa
      */
-    public String description;
+    private String description;
 
     /**
      * Campos customizados 
      * 
      */
-    public String custom;
+    private JsonNode custom;
 
 	public String getId() {
 		return id;
@@ -54,13 +56,15 @@ public class Tarefa {
 		this.description = description;
 	}
 
-	public String getCustom() {
+	public JsonNode getCustom() {
 		return custom;
 	}
 
-	public void setCustom(String custom) {
+	public void setCustom(JsonNode custom) {
 		this.custom = custom;
 	}
+
+	
     
     
 }
