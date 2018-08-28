@@ -1,5 +1,7 @@
 package br.com.senior.custom;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +17,12 @@ public class CreateTarefaCustomController {
     }
 
 	@PostMapping(path="/tarefa")
-	public ResponseEntity<Tarefa> customCreateTarefa(@RequestBody Tarefa tarefa ){
+	public ResponseEntity<Tarefa> customCreateTarefa(@RequestBody Tarefa tarefa, HttpServletRequest request ){
+		
+		String user = request.getHeader("x-senior-user");
+		String tenant = request.getHeader("x-senior-tenant");
+		
+		
 		tarefa.setDescription(tarefa.getDescription() + " - CUSTOMIZADO");
 		return ResponseEntity.ok(tarefa);
 	}
